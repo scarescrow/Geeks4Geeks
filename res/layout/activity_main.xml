@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >     
+     
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:text="@string/heading"
+        android:textColor="#006600"
+        android:layout_marginLeft="10dp"
+        android:textSize="30sp" />
+    
+    <!-- Select Label -->
+    <TextView
+        android:id="@+id/spinner1_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:text="@string/select_category"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:padding="8dip" />
+     
+    <!-- Spinner Dropdown Subtopic-->
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/spinner1_title"
+        android:layout_below="@id/spinner1_text"
+        android:layout_marginTop="5dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+    />
+    
+    <!-- Select Label -->
+    <TextView
+        android:id="@+id/spinner2_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinner1"
+        android:text="@string/select_subtopic"
+        android:padding="8dip" />
+     
+    <!-- Spinner Dropdown Subtopic-->
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/spinner2_title"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinner2_text"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+    />
+    
+    <!-- Select Label -->
+    <TextView
+        android:id="@+id/spinner3_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_topic"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinner2"
+        android:layout_marginTop="10dp"
+        android:padding="8dip" />
+    
+    <!-- Spinner Dropdown Topic-->
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/spinner3_title"
+        android:layout_below="@id/spinner3_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dip"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+    />
+    
+    <!-- Add Button -->
+    <Button android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinner3"
+        android:onClick="load"
+        android:layout_marginLeft="18dip"
+        android:layout_marginTop="25dip"/>
+</RelativeLayout>
