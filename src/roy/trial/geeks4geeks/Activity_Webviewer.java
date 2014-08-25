@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.webkit.WebView;
 import roy.trial.geeks4geeks.DataBaseHelper;
 
@@ -34,6 +35,7 @@ public class Activity_Webviewer extends Activity {
 		String topic = i.getStringExtra("topic");
 		String category = i.getStringExtra("category");
 
+		setTitle(topic);
 		if (category.charAt(0) == 'a') {
 			details = dbHelper.search_algo(topic);
 		} else {
@@ -63,6 +65,15 @@ public class Activity_Webviewer extends Activity {
 		}
 
 	}
+	
+	public void share(MenuItem item) {
+		Intent sharing = new Intent(android.content.Intent.ACTION_SEND);
+		sharing.setType("text/plain");
+		String sharebody = "Geeks For Geeks Topic: " + Topic + ", Url: " + link;
+		sharing.putExtra(android.content.Intent.EXTRA_SUBJECT, "Shared stuff from Geeks4Geeks");
+		sharing.putExtra(android.content.Intent.EXTRA_TEXT, sharebody);
+		startActivity(Intent.createChooser(sharing, "Share via"));
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -71,4 +82,8 @@ public class Activity_Webviewer extends Activity {
 		return true;
 	}
 
+	/*@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		return true;
+	}*/
 }

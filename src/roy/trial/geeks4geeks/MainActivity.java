@@ -134,7 +134,7 @@ public class MainActivity extends Activity {
 
 		// Drop down layout style - list view with radio button
 		dataAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
 
 		// attaching data adapter to spinner
 		s1.setAdapter(dataAdapter);
@@ -153,7 +153,7 @@ public class MainActivity extends Activity {
 
 		// Drop down layout style - list view with radio button
 		dataAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
 
 		// attaching data adapter to spinner
 		s2.setAdapter(dataAdapter);
@@ -169,11 +169,11 @@ public class MainActivity extends Activity {
 
 		// Creating adapter for spinner
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, subtopics);
+				R.layout.multiline_spinner_dropdown_item, subtopics);
 
 		// Drop down layout style - list view with radio button
 		dataAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+				.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
 
 		// attaching data adapter to spinner
 		s3.setAdapter(dataAdapter);
